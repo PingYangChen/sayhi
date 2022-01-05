@@ -20,26 +20,26 @@ I received my Ph.D. degree in Statistics at the Dept. of Statistics, National Ch
 
 ## Experience
 
-- Sept 2020 - Now: **Postdoctoral Researcher** / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
+- 09.2020 - Now / **Postdoctoral Researcher** / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
   - R&D of optimal experimental design theory and the corresponding combinatorial optimization algorithms.
   - R&D of surrogate-model-based Bayesian optimization theory and algorithms.
   - Leading consulting team in solving machine learning problems for the manufacturing industry.
   - Lecture the machine learning and AI short courses for the manufacturing industry.
-- Feb 2018 - Jul 2020: **Engineer** / ITRI Southern Region Campus, Industrial Technology Research Institute, Tainan, Taiwan
+- 02.2018 - 07.2020 / **Engineer** / ITRI Southern Region Campus, Industrial Technology Research Institute, Tainan, Taiwan
   - Optimization team leader, project owner and data analysis core programmer.
   - Use machine learning to solve prediction and optimization problems for the manufacturing industry.
   - Lecture the machine learning and AI short courses for the manufacturing industry.
-- Sept 2016 - Jul 2017: **Visiting Graduate Researcher** / Department of Biostatistics, University of California, Los Angeles, USA (Host Professor: Weng Kee Wong)
+- 09.2016 - 07.2017 / **Visiting Graduate Researcher** / Department of Biostatistics, University of California, Los Angeles, USA (Host Professor: Weng Kee Wong)
   - R&D of optimal experimental design theory and the corresponding metaheuristic optimization algorithms.
   - Lecture the short course of R Shiny development.
-- Sept 2012 - Feb 2013: **QA Engineer** / Unimicron Technology Corp., Taoyuan, Taiwan
+- 09.2012 - 02.2013 / **QA Engineer** / Unimicron Technology Corp., Taoyuan, Taiwan
 
 ## Education
 
-- **Ph.D. in Statistics** / 2013 - 2018 / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
+- 2013 - 2018 / **Ph.D. in Statistics** / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
   - Dissertation: *"Swarm Intelligence Algorithms for Design Generators"* Advised by Prof. Ray-Bing Chen
-- **M.S. in Statistics** / 2010 - 2012 / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
-- **B.S. in Applied Mathematics** / 2005 - 2010 / Department of Mathematical Sciences, National Chengchi University, Taipei, Taiwan
+- 2010 - 2012 / **M.S. in Statistics** / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
+- 2005 - 2010 / **B.S. in Applied Mathematics** / Department of Mathematical Sciences, National Chengchi University, Taipei, Taiwan
 
 ---
 
