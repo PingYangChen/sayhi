@@ -18,7 +18,6 @@ toc: true
 
 I received my Ph.D. degree in Statistics at the Dept. of Statistics, National Cheng Kung University, Taiwan, and started my expertise service in industrial statistics in 2018.  My research interest covers the theory and algorithmic generation of optimal experiment designs and sequential designs.  I have also led and participated in several data science projects related to the manufacturing industry.  The recent focus of my work is on the surrogate modeling and acquisition strategy in Bayesian optimization.  
 
-
 ## Experience
 
 - Sept 2020 - Now: **Postdoctoral Researcher** / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
@@ -35,13 +34,11 @@ I received my Ph.D. degree in Statistics at the Dept. of Statistics, National Ch
   - Lecture the short course of R Shiny development.
 - Sept 2012 - Feb 2013: **QA Engineer** / Unimicron Technology Corp., Taoyuan, Taiwan
 
-
 ## Education
 
 - **Ph.D. in Statistics** / 2013 - 2018 / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
   - Dissertation: *"Swarm Intelligence Algorithms for Design Generators"* Advised by Prof. Ray-Bing Chen
 - **M.S. in Statistics** / 2010 - 2012 / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
 - **B.S. in Applied Mathematics** / 2005 - 2010 / Department of Mathematical Sciences, National Chengchi University, Taipei, Taiwan
-
 ---
 
