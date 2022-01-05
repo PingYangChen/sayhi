@@ -4,9 +4,6 @@ categories:
   - R
 ---
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-
 **elnglm** is a self-developed package that fits the generalized linear model (GLM) with elastic net penalty and predicts the response based on the fitted GLM.  This package is developed by R codes, and, accelerated using C++ codes through **Rcpp** and **RcppArmadillo** packages.  After the manual section, a report showing comparison of computer costs of R and Armadillo engines of this package is attached.
 
 ## How to Use **elnglm**
@@ -327,6 +324,6 @@ $$
 where $\beta_{0k}$ and $\boldsymbol\beta_k=(\beta_{1k}, \beta_{2k}, \ldots, \beta_{pk})$ are the coefficients of the $k$-th logistic model.
 
 The elastic-net estimates of the multinomial regression coefficients maximize the penalized likelihood function
-\\[
+$$
 \underset{\beta_{0k},\boldsymbol\beta_k,k=0,\ldots,K-1}{\max}\frac{1}{n}\sum_{i=1}^n\Big[\sum_{k=0}^{K-1}\log{p_k(x_i)}\Big]+\lambda\sum_{j=1}^p\sum_{k=0}^{K-1}\left[ \frac{1-\alpha}{2}\beta_{jk}^2+\alpha|\beta_{jk}|\right].
-\\]
+$$
