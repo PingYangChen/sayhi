@@ -6,8 +6,8 @@ main:
   - title: "Publication"
     url: /publication/
     toc: true
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  - title: "Projectss"
+    url: /projects/
   # - title: "Sitemap"
   #   url: /sitemap/
   # - title: "Quick-Start Guide"
