@@ -14,13 +14,13 @@ categories:
 ### Installation
 
 The **elnglm** package is available on the Github repository \url{https://github.com/PingYangChen/elnglm}. The user can install **elnglm** in R by the command of the **devtools** package.
-```{r}
+```r
 install.packages("devtools")
 devtools::install_github("PingYangChen/elnglm")
 ```
 
 Then, activate **elnglm** by the standard command in R.
-```{r}
+```r
 library(elnglm)
 ```
 
@@ -32,7 +32,7 @@ Use `glmDataGen` to generate simulation data with continuous response (`family =
 
 For continuous and binary types of response variable, input the real-valued intercept `trueb0` and real-valued coefficient vector `trueb`. The length of `trueb` should be equal to the dimension of the predictor matrix, `d`.  The continuous response variable are generated based on Normal error assumption, and hence, the user needs to specify the stanard deviation of the error term, `s`.
 
-```{r}
+```r
 set.seed(99)
 trueb0 <- 1
 trueact <- c(1, 1, 1, 0, 0, 0, 0, 0, 0, 0)
@@ -46,7 +46,7 @@ dfb <- glmDataGen(n = 500, d = 10, family = "binomial", trueb0, trueb, seed = 10
 
 For multi-categorical response variable, the funciton simulates the data based on  multi-logistic model. Suppose there are $K$ categories, the user needs to input $K$ sets of regression coefficients. The input of intercept term is a real-valued vector of length $K$ and the input of the regression coefficients is a $d\times K$ matrix. See details in the "Theoretical Development" section.
 
-```{r}
+```r
 set.seed(99)
 trueb0m <- c(1, 1, 1)
 trueactm <- cbind(
@@ -67,13 +67,13 @@ dfm <- glmDataGen(500, 10, family = "multinomial", trueb0m, truebm, seed = 100)
 
 Use `glmPenaltyFit` to fit the generalized linear model (GLM) with elastic net penalty.  The function supports the GLM of continuous response (`family = "gaussian"`), binary response (`family = "binomial"`) and multi-categorical response (`family = "multinomial"`).  The function fits GLMs for different penalty parameters as the same time. The vector of penalty parameters can be automatically generated, from the theoretically obtained maximal value, $\lambda_{max}$, to its `minLambdaRatio`-times multiple, of length `lambdaLength`. Alternatively, the function accepts user-defined input lambda vector via `lambdaVec`.
 
-```{r}
+```r
 mdl <- glmPenaltyFit(y = df$y, x = df$x, family = "gaussian", lambdaLength = 100, 
                      maxit = 1e5, tol = 1e-7, alpha = 0.5, minLambdaRatio = 1e-3, 
                      ver = "arma")
 ```
 
-```{r}
+```r
 colorlist <- sapply(1:nrow(mdl$b), function(k) {
   val <- runif(3); rgb(val[1], val[2], val[3])
 })
@@ -89,18 +89,18 @@ legend("topright", legend = sprintf("b%d", 1:nrow(mdl$b)), ncol = 3,
 
 The function `glmPenaltyCV` supports the tuning for the penalty parameter via k-fold cross validation. 
 
-```{r}
+```r
 mdlcv <- glmPenaltyCV(y = df$y, x = df$x, family = "gaussian", lambdaLength = 100, 
                       maxit = 1e5, tol = 1e-7, alpha = 0.5, minLambdaRatio = 1e-3,
                       nfolds = 10, ver = "arma")
 ```
 
-```{r}
+```r
 plot(mdlcv$lambda, mdlcv$cvscore, type = "l", xlab = "lambda", ylab = "RMSE Value")
 ```
 
 
-```{r}
+```r
 # Intercept of the linear model
 mdlcv$b0[mdlcv$lambdaBestId]
 # Regression coefficients of the linear model
@@ -110,7 +110,7 @@ mdlcv$b[,mdlcv$lambdaBestId]
 
 The function `glmPenaltyPred` predicts the response for the new predictor.
 
-```{r}
+```r
 # Predict for new data
 xnew <- matrix(rnorm(10), 1, 10)
 yp <- glmPenaltyPred(mdlcv, xnew)
@@ -121,18 +121,18 @@ print(yp[,mdlcv$lambdaBestId])
 
 Below is the GLM with elastic net penalty fitting for the binary response.
 
-```{r}
+```r
 mdlcv_b <- glmPenaltyCV(y = dfb$y, x = dfb$x, family = "binomial", lambdaLength = 100,
                         maxit = 1e5, tol = 1e-7, alpha = 0.5, minLambdaRatio = 1e-3, 
                         nfolds = 10, ver = "arma")
 ```
 
 
-```{r}
+```r
 plot(mdlcv_b$lambda, exp(-mdlcv_b$cvscore), type = "l", xlab = "lambda", ylab = "Accuracy Value")
 ```
 
-```{r}
+```r
 # Intercept of the logistic model
 mdlcv_b$b0[mdlcv_b$lambdaBestId]
 # Regression coefficients of the logistic model
@@ -140,7 +140,7 @@ mdlcv_b$b[,mdlcv_b$lambdaBestId]
 ```
 
 
-```{r}
+```r
 # Predict for new data
 xnew <- matrix(rnorm(10), 1, 10)
 #
@@ -156,13 +156,13 @@ print(yp[,mdlcv_b$lambdaBestId])
 
 
 Below is the GLM with elastic net penalty fitting for the multi-categorical response.
-```{r}
+```r
 mdlcv_m <- glmPenaltyCV(y = dfm$y, x = dfm$x, family = "multinomial", lambdaLength = 100, 
                         maxit = 1e5, tol = 1e-7, alpha = 0.5, minLambdaRatio = 1e-3, 
                         nfolds = 10, ver = "arma")
 ```
 
-```{r}
+```r
 # Intercept of the multinomial model
 mdlcv_m$b0[,mdlcv_m$lambdaBestId]
 # Regression coefficients of the multinomial model
@@ -170,7 +170,7 @@ mdlcv_m$b[,,mdlcv_m$lambdaBestId]
 ```
 
 
-```{r}
+```r
 # Predict for new data
 xnew <- matrix(rnorm(10), 1, 10)
 #
@@ -189,7 +189,7 @@ print(yp[,,mdlcv_m$lambdaBestId])
 
 A simple test of this self-developed **elnglm** package is conducted. 
 
-```{r}
+```r
 library(glmnet)
 # Set for true values of the regression coefficients
 trueb0 <- 1
@@ -245,7 +245,7 @@ for (iRep in 1:nRep) {
 }
 ```
 
-```{r}
+```r
 trueact <- abs(trueb) > 0
 #
 elnglm_r_act <- abs(testResult$elnglm_r$estb) > 0
@@ -270,12 +270,17 @@ dimnames(sumTable) <- list(
   c("elnglm_r", "elnglm_arma", "glmnet"), 
   c(sprintf("x%02d", 1:length(trueact)), "CPU Time (s)")
 )
-#
+```
+
+```r
 # Accuracy values, %, of identifying active/inactive status of the covariates
 # and computing time, in seconds, of the functions.
 print(sumTable)
+#>             x01 x02 x03 x04 x05 x06 x07 x08 x09 x10 CPU Time (s)
+#> elnglm_r    100 100 100 100  32  28  28  28  28  32       0.3148
+#> elnglm_arma 100 100 100 100  34  32  32  28  28  34       0.0222
+#> glmnet      100 100 100 100  14  36  32  28  34  38       0.0420
 ```
-
 
 ## Theoretical Development
 
