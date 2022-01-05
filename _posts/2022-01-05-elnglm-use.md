@@ -4,6 +4,9 @@ categories:
   - R
 ---
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+
 **elnglm** is a self-developed package that fits the generalized linear model (GLM) with elastic net penalty and predicts the response based on the fitted GLM.  This package is developed by R codes, and, accelerated using C++ codes through **Rcpp** and **RcppArmadillo** packages.  After the manual section, a report showing comparison of computer costs of R and Armadillo engines of this package is attached.
 
 ## How to Use **elnglm**
