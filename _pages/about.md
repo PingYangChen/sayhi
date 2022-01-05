@@ -40,5 +40,6 @@ I received my Ph.D. degree in Statistics at the Dept. of Statistics, National Ch
   - Dissertation: *"Swarm Intelligence Algorithms for Design Generators"* Advised by Prof. Ray-Bing Chen
 - **M.S. in Statistics** / 2010 - 2012 / Department of Statistics, National Cheng Kung University, Tainan, Taiwan
 - **B.S. in Applied Mathematics** / 2005 - 2010 / Department of Mathematical Sciences, National Chengchi University, Taipei, Taiwan
+
 ---
 
