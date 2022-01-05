@@ -10,7 +10,7 @@ categories:
 
 ### Installation
 
-The **elnglm** package is available on the Github repository \url{https://github.com/PingYangChen/elnglm}. The user can install **elnglm** in R by the command of the **devtools** package.
+The **elnglm** package is available on the [Github repository](https://github.com/PingYangChen/elnglm). The user can install **elnglm** in R by the command of the **devtools** package.
 ```r
 install.packages("devtools")
 devtools::install_github("PingYangChen/elnglm")
