@@ -85,7 +85,8 @@ for (i in 2:nrow(mdl$b)) {
 legend("topright", legend = sprintf("b%d", 1:nrow(mdl$b)), ncol = 3,
        col = colorlist, lty = 1, cex = 0.6)
 ```
-
+![Coefficient Path]({{ site.url }}{{ site.baseurl }}/assets/images/2022-01-05/coefpath.png)
+{: .image-right}
 
 The function `glmPenaltyCV` supports the tuning for the penalty parameter via k-fold cross validation. 
 
@@ -98,7 +99,8 @@ mdlcv <- glmPenaltyCV(y = df$y, x = df$x, family = "gaussian", lambdaLength = 10
 ```r
 plot(mdlcv$lambda, mdlcv$cvscore, type = "l", xlab = "lambda", ylab = "RMSE Value")
 ```
-
+![RMSE Values]({{ site.url }}{{ site.baseurl }}/assets/images/2022-01-05/lincv.png)
+{: .image-right}
 
 ```r
 # Intercept of the linear model
@@ -131,6 +133,8 @@ mdlcv_b <- glmPenaltyCV(y = dfb$y, x = dfb$x, family = "binomial", lambdaLength 
 ```r
 plot(mdlcv_b$lambda, exp(-mdlcv_b$cvscore), type = "l", xlab = "lambda", ylab = "Accuracy Value")
 ```
+![ACC Values]({{ site.url }}{{ site.baseurl }}/assets/images/2022-01-05/logiscv.png)
+{: .image-right}
 
 ```r
 # Intercept of the logistic model
